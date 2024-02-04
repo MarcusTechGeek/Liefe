@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Reminder</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ff0c08ed; /* Light Pink Background */
+        }
+
+        #login-container {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff; /* White Background */
+        }
+
+        #login-form input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        #login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #cf1919; /* Deep Pink Button */
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #login-form button:hover {
+            background-color: #ff0000; /* Darker Pink Hover */
+        }
+
+        h2 {
+            color: #e60000; /* Deep Pink Text */
+            text-align: center;
+        }
+
+        #love-message {
+            text-align: center;
+            font-style: italic;
+            color: #cc0000; /* Darker Pink Text */
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Love Reminder</h2>
+        <form id="login-form">
+            <label for="username">Your Hubby's Name:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Secret Code (yyyy/mm/dd):</label>
+            <input type="password" id="password" placeholder="e.g., 2024/02/14" required>
+            
+            <button type="button" onclick="login()">Unlock Love</button>
+        </form>
+        <p id="love-message">Love is the password to your heart! ❤️</p>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value.toUpperCase(); // Convert to uppercase
+            var password = document.getElementById("password").value;
+
+            // Check username and password (replace this with your authentication logic)
+            if (username === "MARCUS" && password === "2021/07/30") {
+                openLoveDock();
+            } else {
+                alert("Invalid credentials. Please try again to unlock the love. ❤️");
+                clearFields();
+            }
+        }
+
+        function openLoveDock() {
+            // Open a new window (or tab) for the Love Dock
+            var loveDock = window.open("Love/love.html", "_blank");
+            // You can customize the URL and features of the new window
+            // For simplicity, let's assume there's a file named "lovedock.html"
+        }
+
+        function clearFields() {
+            // Clear the input fields
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+        }
+    </script>
+</body>
+</html>

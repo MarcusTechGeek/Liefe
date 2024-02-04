@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Dock</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
+
+    <style>
+        body {
+            font-family: 'Dancing Script', cursive;
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom right,  #b93b4a, #fd0026); /* Darker Red Gradient Background */
+        }
+
+        #text-container {
+            text-align: center;
+            flex-grow: 1; /* Allow the text-container to grow to fill the available space */
+            overflow-y: auto; /* Enable vertical scrolling if the content exceeds the container's height */
+        }
+
+        #love-container {
+            width: 600px; /* Fixed width for larger screens */
+            max-width: 90%; /* Set maximum width to prevent overflow */
+            padding: 20px;
+            border: 1px solid #8e2b3a; /* Darker Red Border */
+            border-radius: 5px;
+            box-shadow: 0 0 10px  rgba(0, 0, 0, 0.1);
+            background: linear-gradient(to bottom right, #b93b4a, #fd0026); /* Darker Red Gradient Background */
+            margin: 20px auto; /* Center the container horizontally */
+            word-wrap: break-word; /* Allow words to break and wrap to the next line */
+        }
+
+        h2 {
+            color: #6d1f2b; /* Dark Red Text */
+            margin-bottom: 10px; /* Add space between title and text */
+            margin-top: 0; /* Reset top margin */
+            font-size: 50px; /* Larger font size for title */
+            position: relative;
+            display: inline-block;
+            z-index: 1; /* Ensure the text appears above the hearts */
+        }
+
+        h2::before,
+        h2::after {
+            content: '\2764'; /* Unicode heart character */
+            font-size: 36px;
+            color: #6d1f2b; /* Dark Red Heart Color */
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        h2::before {
+            left: -40px;
+        }
+
+        h2::after {
+            right: -40px;
+        }
+
+        #love-message {
+            font-size: 30px;
+            color: #6d1f2b; /* Slightly Darker Red Text */
+            line-height: 1.6; /* Increase line height for better readability */
+        }
+
+        @media (max-width: 768px) {
+            #love-container {
+                width: 90%; /* Full width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="text-container">
+        <h2>My Dearest Pikkewyntjie:</h2>
+        <div id="love-container">
+            <div id="love-message">
+                <p>
+                    My love, this website is for you to read whenever you feel like you miss me
+                    or need love from me when I am not available to talk. My love for you is unconditional, 
+                    endless, and overflowing. Words cannot describe how much I love you.
+                    Since I've known you, you have made my life better and easier by making me 
+                    a better me. You are such an amazing wifey, always helping me, loving me, and supporting me
+                    where you can. You truly are wifey material, and I would not wish to marry anyone besides you.
+                    I want to spend the rest of my life with you and only you, watching our
+                    kids grow up, going on trips together, being successful together, and just loving 
+                    one another.
+                    <br>
+                    <br>
+                    My Love, there is no doubt in my mind that we will have an amazing and eventful life
+                    together. One day, you and I will be on our front porch, old and wrinkly, looking 
+                    back at our past and laughing together at all the wonderful memories we made together.
+                    One day, I will be old and wrinkly, and I will still love it when you send me your silly videos 
+                    from your fyp. We will have cuddles together and a fart-positive relationship, haha.
+                    <br><br>
+                    Haha, yes, you can have more chins, and we will, for sure, have to get Boltie a friend or two,
+                    but don't forget who has to clean up after them in the house, neh 😄.
+                    <br><br>
+                    All I want you to know is that I will love you forever and ever, and I would give you the whole world 
+                    when I can. I want you to know that I would give my life to protect you and our family.
+                    You are and always will be the love of my life. Remember that, forever and ever.
+                    <br><br><br>
+                    PS: Yes, I would still love you if you were a Gogga!
+                    As long as You are MY GOGGA!
+                </p>
+                <br>
+                <p>With Love,<br>Your Hubby</p>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
